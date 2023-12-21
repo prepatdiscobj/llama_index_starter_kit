@@ -66,7 +66,7 @@ def create_hugginface_llm(model_name="stabilityai/stablelm-zephyr-3b",
     return llm
 
 
-def query_data():
+def query_data(index):
     while True:
         question = input("Enter your question, or type 'exit' to quit: ")
         if question.lower() == 'exit':
