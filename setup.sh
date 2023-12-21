@@ -27,3 +27,7 @@ conda activate beautifulmind
 #Install requirements
 pip install -r requirements.txt
 
+# Create Jupyter Kernel
+pip install ipykernel
+python -m ipykernel install --user --name=beautifulmind
+
