@@ -93,10 +93,13 @@ def load_index(service_context):
 
 def main():
     # setup the LLM
+    print('Creating Huggingface LLM.....', end='')
     llm = create_hugginface_llm()
+    print('Done\nCreating Index......',end='')
     service_context = ServiceContext.from_defaults(llm=llm,
         embed_model="local:BAAI/bge-small-en-v1.5")
     index = load_index(service_context)
+    print('Done\n')
     # Load data and build an index  
     
     # enable logging
