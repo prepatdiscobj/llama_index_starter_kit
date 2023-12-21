@@ -84,11 +84,13 @@ def load_index(service_context):
             documents, service_context=service_context)
         # store it for later
         index.storage_context.persist(persist_dir='index')
+        return index
     else:
         # load the existing index
         print('Founding Already built-in Index. Loading from it')
         storage_context = StorageContext.from_defaults(persist_dir="./index")
         index = load_index_from_storage(storage_context)
+        return index
 
 
 def main():
